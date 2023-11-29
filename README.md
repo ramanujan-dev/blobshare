@@ -27,7 +27,7 @@
 ## ABOUT THE PROJECT
 <pre>
 The aim of this project is to share multiple files using a web browser. It is inspired from Snapdrop.
-The abstrack working of the project is
+The abstract working of this project is
   1) Identify the network of the user
   2) Identify users in the same network
   3) Use Websocket as a signaling server to connect two users

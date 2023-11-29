@@ -1,0 +1,499 @@
+html,
+body {
+    margin: 0;
+    height: 98%;
+    background-color: #85D1D3;
+    padding: 0.3% 2% 1% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 96%;
+}
+
+#header {
+    width: 100%;
+    background-color: #58ABC0;
+    border-radius: 20px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-title {
+    font-size: 30px;
+    color: white;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+#main {
+    width: 100%;
+    height: 77%;
+    margin: 2% 0 2% 0;
+    display: flex;
+    column-gap: 1%;
+}
+
+#active-users-title {
+    color: #27322D;
+    height: 10%;
+
+}
+
+#active-users-container {
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#footer {
+    width: 100%;
+    height: 3%;
+    display: flex;
+    column-gap: 1%;
+
+}
+
+#dialog-buttons {
+    display: flex;
+    width: 49.5%;
+    column-gap: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-label{
+    color: #27322D;
+    margin: auto;
+    margin-right: 10%;
+    float: right;
+}
+
+#send-dialog {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    color: #4865FF;
+}
+
+#recv-dialog {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    color: #4865FF;
+}
+
+#send-dialog:hover,
+#recv-dialog:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: larger;
+    color: #7A0000;
+    padding-left: 0.5%;
+}
+
+#active-users {
+    height: 100%;
+    border-radius: 20px;
+    width: 50%;
+    background-color: #ABE0E5;
+    box-sizing: border-box;
+    padding: 2% 0.5% 2% 2%;
+}
+
+#right-panel {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3%;
+}
+
+#file-choose {
+    height: 30%;
+    border-radius: 20px;
+    width: 96%;
+    background-color: #D9D9D9;
+    display: flex;
+    column-gap: 2%;
+    padding: 2%;
+    align-items: center;
+}
+#choose-dialog{
+    width: 40%;
+    height: 50%;
+}
+#dialog-message{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 90%;
+}
+#reqpeer{
+    height: 90%;
+}
+
+#drag-drop {
+    display: flex;
+    height: 100%;
+    width: 65%;
+    border-radius: 15px;
+    border: 4px dashed #85D1D3;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #54BFC1;
+    font-size: 150%;
+}
+
+#input-file {
+    display: none;
+}
+
+#input-file-label {
+    display: flex;
+    height: 100%;
+    width: 35%;
+    background-color: #58ABC0;
+    border-radius: 15px;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+#file-list {
+    height: 70%;
+    border-radius: 20px;
+    width: 100%;
+    padding: 4%;
+    background-color: #D9D9D9;
+    box-sizing: border-box;
+}
+
+#active-users-title,
+#file-list-title {
+    font-size: larger;
+}
+
+.active-user-div {
+    width: 98%;
+    background-color: #E4F1F4;
+    height: 11%;
+    border-radius: 20px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 1% 0% 1% 2.5%;
+    margin-bottom: 3%;
+    margin-right: 2%;
+}
+
+.active-user-img {
+    align-self: flex-start;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: grey;
+}
+
+.active-user-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    box-sizing: border-box;
+    align-self: center;
+    width: 80%;
+    font-size: larger;
+}
+
+.active-user-send-icon {
+    align-self: flex-end;
+    height: 90%;
+    aspect-ratio: 1;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#file-list-header{
+    display: flex;
+    height: 15%;
+    align-items: center;
+}
+
+#file-list-title{
+    width: 37%;
+    margin-right: 3%;
+}
+#select-all,#unselect-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 20%;
+    height: 60%;
+    width: 20%;
+    margin-right: 5%;
+    background-color: #85D1D3;
+}
+#clear-files{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 20%;
+    height: 60%;
+    background-color: #F28080;
+}
+#file-list-container{
+        height: 80%;
+        overflow-y: auto;
+}
+.file-list-div {
+    width: 98%;
+    height: 20%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 1% 0% 1% 2.5%;
+    margin-right: 2%;
+    justify-content: center;
+    align-items: center;
+}
+.file-name{
+    width: 60%;
+    overflow: hidden;
+    letter-spacing: 8px;
+}
+.file-size{
+    width: 30%;
+}
+.file-checkbox{
+    width: 10%;
+    height: 60%;
+    aspect-ratio: 1;
+    accent-color: black;
+}
+.progress-bar {
+    height: 15%;
+    margin:1%;
+}
+
+.progress-header {
+    height: 70%;
+    display: flex;
+}
+
+.progress-desc {
+    width: 70%;
+}
+
+.pregress-done {
+    width: 30%;
+}
+
+.progress-bar-back {
+    width: 75%;
+    background-color: grey;
+    height: 100%;
+    margin-right: 5%;
+}
+
+.progress-bar-thumb {
+    position: relative;
+    width: 40%;
+    background-color: rgb(255, 0, 0);
+    height: 50%;
+}
+.progress-denote{
+    width: 100%;
+    display: flex;
+    height: 5%;
+    align-items: center;
+}
+.progress-done-percent{
+    width: 20%;
+}
+body,
+html {
+    height: 100%;
+    background-color: #85D1D3;
+}
+
+#click-it {
+    background-color: rgb(187, 26, 26);
+    color: white;
+    font-size: larger;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#dialog {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+    background-color: white;
+    border-width: 0;
+    row-gap: 5%;
+}
+
+#dialog-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+}
+
+#title-dialog {
+    height: 95%;
+    font-size: x-large;
+    width: 95%;
+    align-self: flex-start;
+}
+
+#dialog-header {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.close-dialog {
+    width: 5%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+}
+
+.close-dialog:hover {
+    cursor: pointer;
+}
+
+#progress-container {
+    height: 85%;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 480px) {
+    #main{
+        flex-direction: column;
+    }
+    #active-users{
+        height: 30%;
+        width: 100%;
+    }
+    .active-user-div{
+        height: 22%;
+    }
+    #active-users-title{
+        margin-bottom: 5%;
+    }
+    #right-panel{
+        height:68%;
+        margin-top: 2%;
+        width: 100%;
+    }
+    #drag-drop{
+        display: none;
+    }
+    #input-file-label{
+        width: 100%;
+    }
+    #footer{
+        height: 5%;
+    }
+    #header-title{
+        font-size: larger;
+    }
+    #user-label{
+        font-size: large;
+    }
+    #select-all,#unselect-all,#clear-files,#file-list-title{
+        width: 25%;
+    }
+    #dialog{
+        width: 90%;
+        height: 40%;
+        left: 50%;
+        top: 50%;
+    }
+    .progress-bar{
+        height: 30%;
+    }
+  }
+.user-color{
+    color: rgb(216, 117, 36);
+}
+#pairing,#declined{
+    height: 100%;
+}
+#pairing-label,#reject-label{
+    position: relative;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+#reject-label{
+    left: 35%;
+}
+#accept{
+    background-color: rgb(42, 182, 42);
+    color: white;
+    width: 20%;
+    aspect-ratio: 2;
+    margin: auto;
+    float: right;
+    border-radius: 20px;
+}
+#decline{
+    background-color: red;
+    color: white;
+    width: 20%;
+    aspect-ratio: 2;
+    margin: auto;
+    float: right;
+    border-radius: 20px;
+    margin-left: 5%;
+}
+
+.textHover{
+    cursor: default;
+}
